@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3B82F6;
+  --primary-hover: #2563EB;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold text-gray-900;
+    font-family: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl leading-tight;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl leading-tight;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+
+  p {
+    @apply text-base leading-relaxed text-gray-600;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold tracking-wide transition-colors duration-200;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-hover;
+  }
+
+  .container {
+    @apply px-4 sm:px-6 lg:px-8 mx-auto w-full;
+    max-width: 1440px;
+  }
+
+  .section {
+    @apply py-20 md:py-28 lg:py-36;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-gray-600 hover:text-primary transition-colors;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
