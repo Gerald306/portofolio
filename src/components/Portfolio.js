@@ -10,7 +10,7 @@ const Portfolio = () => {
       title: 'Klots Finance Tracker',
       description: 'A comprehensive financial management platform with AI-powered insights, real-time tracking, and smart budgeting features.',
       tags: ['React', 'Node.js', 'AI Integration', 'Financial API'],
-      image: process.env.PUBLIC_URL + 'public/assets/klots-preview.jpg',
+      image: `${process.env.PUBLIC_URL}/assets/klots-preview.jpg`,
       category: 'Web App',
       link: 'https://klots.vercel.app'
     },
@@ -19,7 +19,7 @@ const Portfolio = () => {
       title: 'AI Chat Assistant',
       description: 'An intelligent chatbot powered by machine learning, providing personalized responses and task automation.',
       tags: ['Python', 'TensorFlow', 'NLP', 'REST API'],
-      image: process.env.PUBLIC_URL + 'public/assets/ai-chat-preview.jpg',
+      image: `${process.env.PUBLIC_URL}/assets/ai-chat-preview.jpg`,
       category: 'AI',
       link: 'https://github.com/Gerald306/ai-chat-assistant'
     },
@@ -28,7 +28,7 @@ const Portfolio = () => {
       title: 'Smart Home Dashboard',
       description: 'IoT-based home automation system with AI-powered energy optimization and predictive maintenance.',
       tags: ['React', 'IoT', 'Machine Learning', 'WebSocket'],
-      image: process.env.PUBLIC_URL + 'public/assets/smart-home-preview.jpg',
+      image: `${process.env.PUBLIC_URL}/assets/smart-home-preview.jpg`,
       category: 'IoT',
       link: 'https://github.com/Gerald306/smart-home-dashboard'
     },
@@ -82,6 +82,9 @@ const Portfolio = () => {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      e.target.src = `${process.env.PUBLIC_URL}/assets/placeholder.jpg`;
+                    }}
                   />
                 </div>
               </a>
